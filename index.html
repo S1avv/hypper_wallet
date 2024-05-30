@@ -144,7 +144,7 @@
                     const data = await response.json();
                     console.log('Account info:', data);
                 } else {
-                    console.error('Failed to fetch account info');
+                    window.location.href = 'https://s1avv.github.io/hypper_wallet/auth';
                 }
             } catch (error) {
                 console.error('Error:', error);
