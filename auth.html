@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"> 
+<title>HYPER LOGIN</title>
+<style>
+    body, html {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background-color: #000000;
+        touch-action: manipulation;
+        user-select: none;
+        overscroll-behavior: none;
+        touch-action: none;
+        font-family: Verdana, sans-serif;
+    }
+
+    #BUTTON_2 {
+        top: 480px;
+        left: -156px;
+        position: absolute;
+        width: 300.987px;
+        background-color: rgba(255, 255, 255, 0.586);
+        border: 0px none rgb(0, 0, 0);
+        border-radius: 10px;
+        font: 16px / 20px Golos;
+        padding: 15px 24px;
+        font-family: Verdana, sans-serif;
+    }
+
+    #DIV_2 {
+        top: 90px;
+        left: -200px;
+        height: 40px;
+        width: 100px;
+        position: absolute;
+        background: rgba(0, 0, 0, 0);
+        font: 16px / 18.4px Golos;
+    }
+
+
+    #INPUT_3 {
+        top: 200px;
+        left: 25px;
+        position: absolute;
+        block-size: 59.7035px;
+        border-block-end-color: rgb(255, 255, 255);
+        border-block-end-style: solid;
+        border-block-end-width: 0.86566px;
+        border-block-start-color: rgb(224, 224, 224);
+        border-block-start-style: solid;
+        border-block-start-width: 0.86566px;
+        border-end-end-radius: 12px;
+        border-end-start-radius: 12px;
+        border-inline-end-color: rgb(238, 238, 238);
+        border-inline-end-style: solid;
+        border-inline-end-width: 0.86566px;
+        border-inline-start-color: rgb(199, 199, 199);
+        border-inline-start-style: solid;
+        border-inline-start-width: 0.86566px;
+        border-start-end-radius: 12px;
+        border-start-start-radius: 12px;
+        caret-color: rgb(255, 255, 255);
+        color: rgb(255, 255, 255);
+        column-rule-color: rgb(255, 255, 255);
+        display: block;
+        height: 19.7035px;
+        inline-size: 367.987px;
+        letter-spacing: -0.12px;
+        min-block-size: auto;
+        min-height: auto;
+        min-inline-size: auto;
+        min-width: auto;
+        padding-block-end: 18px;
+        padding-block-start: 18px;
+        padding-inline-end: 16px;
+        padding-inline-start: 16px;
+        perspective-origin: 183.993px 29.8518px;
+        text-decoration: none solid rgb(255, 255, 255);
+        text-emphasis-color: rgb(255, 255, 255);
+        text-size-adjust: 100%;
+        transform-origin: 183.993px 29.8518px;
+        width: 310px;
+        background: rgba(0, 0, 0, 0.24) none repeat scroll 0% 0% / auto padding-box border-box;
+        border: 0.86566px solid rgb(255, 255, 255);
+        border-radius: 12px;
+        font: 16px / 22px Arial;
+        outline: rgb(255, 255, 255) none 0px;
+        padding: 19px 19px;
+        transition: all 0.3s ease 0s;
+    }
+
+    #INPUT_4 {
+        top: 280px;
+        left: 25px;
+        position: absolute;
+        block-size: 59.7035px;
+        border-block-end-color: rgb(255, 255, 255);
+        border-block-end-style: solid;
+        border-block-end-width: 0.86566px;
+        border-block-start-color: rgb(224, 224, 224);
+        border-block-start-style: solid;
+        border-block-start-width: 0.86566px;
+        border-end-end-radius: 12px;
+        border-end-start-radius: 12px;
+        border-inline-end-color: rgb(238, 238, 238);
+        border-inline-end-style: solid;
+        border-inline-end-width: 0.86566px;
+        border-inline-start-color: rgb(199, 199, 199);
+        border-inline-start-style: solid;
+        border-inline-start-width: 0.86566px;
+        border-start-end-radius: 12px;
+        border-start-start-radius: 12px;
+        caret-color: rgb(255, 255, 255);
+        color: rgb(255, 255, 255);
+        column-rule-color: rgb(255, 255, 255);
+        display: block;
+        height: 19.7035px;
+        inline-size: 367.987px;
+        letter-spacing: -0.12px;
+        min-block-size: auto;
+        min-height: auto;
+        min-inline-size: auto;
+        min-width: auto;
+        padding-block-end: 18px;
+        padding-block-start: 18px;
+        padding-inline-end: 16px;
+        padding-inline-start: 16px;
+        perspective-origin: 183.993px 29.8518px;
+        text-decoration: none solid rgb(255, 255, 255);
+        text-emphasis-color: rgb(255, 255, 255);
+        text-size-adjust: 100%;
+        transform-origin: 183.993px 29.8518px;
+        width: 310px;
+        background: rgba(0, 0, 0, 0.24) none repeat scroll 0% 0% / auto padding-box border-box;
+        border: 0.86566px solid rgb(255, 255, 255);
+        border-radius: 12px;
+        font: 16px / 22px Arial;
+        outline: rgb(255, 255, 255) none 0px;
+        padding: 19px 19px;
+        transition: all 0.3s ease 0s;
+    }
+
+    #H1_2 {
+        position: absolute;
+        top: 160px;
+        left: -55px;
+        font-family: Verdana, sans-serif;
+        font-size: 18px;
+        color: white;
+        white-space: nowrap;
+    }
+
+    #H1_3 {
+        position: absolute;
+        top: 190px;
+        left: -55px;
+        font-family: Verdana, sans-serif;
+        font-size: 18px;
+        color: white;
+        white-space: nowrap;
+    }
+
+    #IMG_1 {
+        position: absolute;
+        width: 80px;
+        top: 160px;
+        left: -150px;
+    }
+
+</style>
+</head>
+<body>
+
+
+    <div id="DIV_1">
+        <button id="BUTTON_2">
+            <span id="SPAN_3">Login</span>
+        </button>
+    </div>
+
+    <div>
+        <div id="DIV_1">
+            <div id="DIV_2">
+                <input placeholder="Введите почту" maxlength="64" name="login" type="text" id="INPUT_3" /><span id="SPAN_4"></span>
+                <div id="DIV_5">
+                    <svg id="svg_6">
+                        <path id="path_7">
+                        </path>
+                    </svg><span id="SPAN_8"></span>
+                </div>
+            </div>
+        </div>
+
+        <div id="DIV_1">
+            <div id="DIV_2">
+                <input placeholder="Введите никнейм" maxlength="64" name="login" type="text" id="INPUT_4" /><span id="SPAN_5"></span>
+                <div id="DIV_5">
+                    <svg id="svg_6">
+                        <path id="path_7">
+                        </path>
+                    </svg><span id="SPAN_8"></span>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h1 id="H1_2">
+                Create an account
+            </h1>
+            <h1 id="H1_3">
+                in Hyper Wallet
+            </h1>
+        </div>
+    </div>
+
+    <img src="H.png" alt="" id="IMG_1" />
+
+<script>
+    document.addEventListener('DOMContentLoaded', async function () {
+        var email = localStorage.getItem('email');
+        var nickname = localStorage.getItem('nickname');
+
+        if (email) {
+            window.location.href = 'file:///D:/Hyper%20Wallet/index.html';
+        }
+    });
+
+    const emailInput = document.getElementById('INPUT_3');
+    const nicknameInput = document.getElementById('INPUT_4');
+    const loginButton = document.getElementById('BUTTON_2');
+
+    const errorMessage = document.createElement('div');
+    errorMessage.style.color = 'red';
+    errorMessage.style.position = 'absolute';
+    errorMessage.style.top = '445px';
+    errorMessage.style.whiteSpace = 'nowrap';
+    errorMessage.style.overflow = 'hidden';
+    errorMessage.style.textOverflow = 'ellipsis';
+    errorMessage.style.fontSize = '14px';
+    errorMessage.style.left = '-170px';
+    errorMessage.style.display = 'none';
+    document.body.appendChild(errorMessage);    
+
+
+    function showError(message) {
+        errorMessage.textContent = message;
+        errorMessage.style.display = 'block';
+        setTimeout(() => {
+            errorMessage.style.display = 'none';
+        }, 3000);
+    }
+
+    function validateInputs() {
+        if (emailInput.value.trim() !== "" && nicknameInput.value.trim() !== "") {
+            loginButton.style.backgroundColor = 'white';
+            loginButton.style.color = 'black';
+            loginButton.disabled = false;
+            loginButton.style.cursor = 'pointer';
+        } else {
+            loginButton.style.backgroundColor = 'rgba(255, 255, 255, 0.586)';
+            loginButton.style.color = 'black';
+            loginButton.disabled = true;
+            loginButton.style.cursor = 'not-allowed';
+        }
+    }
+
+    emailInput.addEventListener('input', validateInputs);
+    nicknameInput.addEventListener('input', validateInputs);
+
+    loginButton.addEventListener('click', async () => {
+        const email = emailInput.value.trim();
+        const nickname = nicknameInput.value.trim();
+
+        if (email && nickname) {
+            try {
+                const response = await fetch('http://127.0.0.1:5000/create_account', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email, nickname })
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    const expires = new Date(Date.now() + 86400000000000).toUTCString();
+
+                    localStorage.setItem('email', email);
+                    localStorage.setItem('nickname', nickname);
+
+                    window.location.href = 'file:///D:/Hyper%20Wallet/index.html';
+                } else {
+                    showError("Пользователь с таким адресом уже существует");
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                showError("Ошибка сервера");
+            }
+        }
+    });
+</script>
+
+</body>
+</html>
