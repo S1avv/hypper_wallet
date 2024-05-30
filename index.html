@@ -126,7 +126,6 @@
         var email = localStorage.getItem('email');
         var nickname = localStorage.getItem('nickname');
 
-        await showLoader(5000);
 
         console.log(email, nickname)
 
@@ -153,6 +152,7 @@
             window.location.href = 'https://s1avv.github.io/hypper_wallet/auth';
         }
     });
+      await showLoader(5000);
 </script>
 
 </body>
