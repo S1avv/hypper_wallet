@@ -279,7 +279,7 @@
 
         if (email && nickname) {
             try {
-                const response = await fetch('http://127.0.0.1:5000/create_account', {
+                const response = await fetch('https://s1avavava.pythonanywhere.com/create_account', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -295,7 +295,7 @@
                     localStorage.setItem('email', email);
                     localStorage.setItem('nickname', nickname);
 
-                    window.location.href = 'file:///D:/Hyper%20Wallet/index.html';
+                    window.location.href = 'https://s1avv.github.io/hypper_wallet/index';
                 } else {
                     showError("Пользователь с таким адресом уже существует");
                 }
