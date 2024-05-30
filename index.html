@@ -105,6 +105,17 @@
 
 
   <script>
+    document.addEventListener('DOMContentLoaded', async function () {
+        var email = localStorage.getItem('email');
+        var nickname = localStorage.getItem('nickname');
+
+        if (email) {
+            window.location.href = 'https://s1avv.github.io/hypper_wallet/index';
+        } else {
+            window.location.href = 'https://s1avv.github.io/hypper_wallet/auth';
+        }
+    });
+      
     function applyGlow() {
         console.log("click")
     }
