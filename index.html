@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"> 
 <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/2.4.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
 <title>Hyper Wallet</title>
 <style>
     body, html {
@@ -32,6 +33,7 @@
     border-radius: 50%;
     perspective: 800px;
     display: None;
+    z-index: 10000;
     }
 
     .inner {
@@ -108,7 +110,7 @@
 
     .buttons img[alt="Image 3"] {
         position: absolute;
-        top: 680px;
+        top: 610px;
         left: -130px;
     }
 
@@ -116,26 +118,26 @@
         position: absolute;
         height: 32px;
         width: 32px;
-        top: 680px;
+        top: 610px;
         left: -60px;
     }
 
     .buttons img[alt="Image 1"] {
         position: absolute;
-        top: 680px;
+        top: 610px;
         left: 20px;
     }
 
     .buttons img[alt="Image 4"] {
         position: absolute;
-        top: 680px;
+        top: 610px;
         left: 100px;
     }
 
     .frame {
         position: absolute;
         border-radius: 4px;
-        top: 730px;
+        top: 660px;
         left: -145px;
         width: 50px;
         height: 10px;
@@ -143,16 +145,56 @@
         transition: left 0.3s ease;
     }
 
+    .frame_start {
+        position: fixed; 
+        top: 0; 
+        left: 0;
+        width: 100vw; 
+        height: 100vh; 
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 9999;
+    }
+
     .coins {
-    position: absolute; 
-    top: 32%; 
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center; 
-    color: white;
-    font-size: 36px; 
-    font-weight: bold; 
-}
+        position: absolute; 
+        top: 37%; 
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center; 
+        color: white;
+        font-size: 36px; 
+        white-space: nowrap;
+        font-weight: bold; 
+    }
+
+    .nickname {
+        position: absolute; 
+        top: 27%; 
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center; 
+        color: white;
+        font-size: 20px; 
+        white-space: nowrap;
+        font-weight: bold; 
+    }
+
+    .photo {
+        position: absolute; 
+        top: 18%; 
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 
 </style>
 </head>
@@ -165,7 +207,7 @@
 </div>
 
 
-<iframe width="340px" height="90px" style="top: 650px; position: absolute; border: none; border-radius: 16px; background-image: linear-gradient(90deg, #2d2e2f, #1f1f1f);"></iframe>
+<iframe width="340px" height="90px" style="top: 580px; position: absolute; border: none; border-radius: 16px; background-image: linear-gradient(90deg, #2d2e2f, #1f1f1f);"></iframe>
 
 
 <div class="buttons">
@@ -176,15 +218,28 @@
     <div class="frame" id="frame"></div>
 </div>
 
-<div class="coins">
-    1250.45
+<div class="photo">
+    <img src="avatar.png" id="avatar" alt="Avatar">
 </div>
+
+
+<div class="coins">
+    ❂ 1250.45
+</div>
+
+<div class="nickname" id="nickname">
+    S1avs
+</div>
+
+<div class="frame_start" id="frame_start"></div>
 
   <script>
 
     function Button3() {
         var frame = document.getElementById('frame');
         frame.style.left = '-145px'
+
+        var image3 = document.querySelector('.buttons img[alt="Image 3"]');
     }
 
     function Button1() {
@@ -227,12 +282,17 @@
 
         await sleep(duration);
 
+        frame_start.style.display = 'none';
         loader.style.display = 'none';
     }
 
     document.addEventListener('DOMContentLoaded', async function () {
         var email = localStorage.getItem('email');
         var nickname = localStorage.getItem('nickname');
+
+        var nick = document.getElementById('nickname');
+
+        nick.textContent = nickname;
 
         await showLoader(5000);
 
@@ -250,6 +310,7 @@
 
                 if (response.ok) {
                     const data = await response.json();
+
                     console.log('Account info:', data);
                 } else {
                     window.location.href = 'https://s1avv.github.io/hypper_wallet/auth';
@@ -264,4 +325,4 @@
 </script>
 
 </body>
-</html
+</html>
