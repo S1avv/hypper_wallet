@@ -90,6 +90,70 @@
     }
     }
 
+    .buttons {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .buttons img {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+        top: 650px;
+        left: 100px;
+        filter: invert(1) brightness(2);
+    
+    }
+
+    .buttons img[alt="Image 3"] {
+        position: absolute;
+        top: 680px;
+        left: -130px;
+    }
+
+    .buttons img[alt="Image 2"] {
+        position: absolute;
+        height: 32px;
+        width: 32px;
+        top: 680px;
+        left: -60px;
+    }
+
+    .buttons img[alt="Image 1"] {
+        position: absolute;
+        top: 680px;
+        left: 20px;
+    }
+
+    .buttons img[alt="Image 4"] {
+        position: absolute;
+        top: 680px;
+        left: 100px;
+    }
+
+    .frame {
+        position: absolute;
+        border-radius: 4px;
+        top: 730px;
+        left: -145px;
+        width: 50px;
+        height: 10px;
+        background-color: #8A2BE2;
+        transition: left 0.3s ease;
+    }
+
+    .coins {
+    position: absolute; 
+    top: 32%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; 
+    color: white;
+    font-size: 36px; 
+    font-weight: bold; 
+}
+
 </style>
 </head>
 <body>
@@ -100,17 +164,50 @@
     <div class="inner three"></div>
 </div>
 
+
 <iframe width="340px" height="90px" style="top: 650px; position: absolute; border: none; border-radius: 16px; background-image: linear-gradient(90deg, #2d2e2f, #1f1f1f);"></iframe>
 
-<script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+<div class="buttons">
+    <img src="1.png" alt="Image 1" onclick="Button1()">
+    <img src="2.png" alt="Image 2" onclick="Button2()">
+    <img src="3.png" alt="Image 3" onclick="Button3()">
+    <img src="4.png" alt="Image 4" onclick="Button4()">
+    <div class="frame" id="frame"></div>
+</div>
+
+<div class="coins">
+    1250.45
+</div>
 
   <script>
+
+    function Button3() {
+        var frame = document.getElementById('frame');
+        frame.style.left = '-145px'
+    }
+
+    function Button1() {
+        var frame = document.getElementById('frame');
+        frame.style.left = '10px'
+    }
+
+    function Button2() {
+        var frame = document.getElementById('frame');
+        frame.style.left = '-70px'
+    }
+
+    function Button4() {
+        var frame = document.getElementById('frame');
+        frame.style.left = '90px'
+    }
+
     document.addEventListener('DOMContentLoaded', async function () {
         var email = localStorage.getItem('email');
         var nickname = localStorage.getItem('nickname');
 
         if (email) {
-            window.location.href = 'https://s1avv.github.io/hypper_wallet/index';
+            pass;
         } else {
             window.location.href = 'https://s1avv.github.io/hypper_wallet/auth';
         }
@@ -167,4 +264,4 @@
 </script>
 
 </body>
-</html>
+</html
